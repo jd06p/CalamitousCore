@@ -1,0 +1,33 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="All Rights Reserved"
+[[mods]]
+modId="calamitouscore"
+version="1.0.0"
+displayName="CalamitousCore"
+authors="karma_mortadela"
+description='''Compilation of tweaks for Terramity CE'''
+[[dependencies.calamitouscore]]
+modId="forge"
+mandatory=true
+versionRange="[47.4.10,)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.calamitouscore]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1,1.20.2)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.calamitouscore]]
+modId="thedulling"
+mandatory=true
+versionRange="[0,)"
+ordering="AFTER"
+side="BOTH"
+[[dependencies.calamitouscore]]
+modId="brutality"
+mandatory=true
+versionRange="[0,)"
+ordering="AFTER"
+side="BOTH"
