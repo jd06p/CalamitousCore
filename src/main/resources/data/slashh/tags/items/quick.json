@@ -1,0 +1,19 @@
+{
+  "replace": false,
+  "values": [
+    { "id": "brutality:diamond_knife", "required": false },
+    { "id": "brutality:dull_knife", "required": false },
+    { "id": "brutality:gold_knife", "required": false },
+    { "id": "brutality:iron_knife", "required": false },
+    { "id": "brutality:void_knife", "required": false },
+    { "id": "brutality:real_knife", "required": false },
+    { "id": "brutality:paper_cut", "required": false },
+    { "id": "lethality:real_knife", "required": false },
+    { "id": "composite_material:abyss_blade", "required": false },
+    { "id": "fangs_n_claws:fang_dagger", "required": false },
+    { "id": "fangs_n_claws:netherite_dagger", "required": false },
+    { "id": "roaring:knife", "required": false },
+    { "id": "roaring:black_knife_tool", "required": false },
+    { "id": "enlightened_end:adamantite_knife", "required": false }
+  ]
+}
