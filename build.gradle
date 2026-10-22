@@ -26,6 +26,7 @@ dependencies {
     compileOnly files('libs/thedulling-0.3.1-forge-1.20.1.jar')
     compileOnly files('libs/curios-forge-5.14.1+1.20.1.jar')
     compileOnly files('libs/herobrine_prime.jar')
+    compileOnly files('libs/Lunar-forge-1.20.1-0.2.7.jar')
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 }
 mixin { add sourceSets.main, 'calamitouscore.refmap.json'; config 'calamitouscore.mixins.json' }

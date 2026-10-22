@@ -31,3 +31,9 @@ mandatory=true
 versionRange="[0,)"
 ordering="AFTER"
 side="BOTH"
+[[dependencies.calamitouscore]]
+modId="lunar"
+mandatory=false
+versionRange="[0,)"
+ordering="AFTER"
+side="CLIENT"
