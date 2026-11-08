@@ -40,3 +40,9 @@ jar {
     ])
     finalizedBy 'reobfJar'
 }
+
+tasks.register('verifyCrcData', JavaExec) {
+    dependsOn testClasses
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'dev.karma.calamitouscore.compat.crc.CrcRaidDataCheck'
+}
