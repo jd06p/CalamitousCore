@@ -45,7 +45,8 @@
     "crc.CrcPortalScreenMixin",
     "battlemusic.BattleMusicValidityMixin",
     "battlemusic.BattleMusicSelectionMixin",
-    "battlemusic.BattleMusicInstanceMixin"
+    "battlemusic.BattleMusicInstanceMixin",
+    "bosschecklist.BossRegistryMixin"
   ],
   "injectors": {
     "defaultRequire": 1
