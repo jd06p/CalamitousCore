@@ -28,6 +28,7 @@ dependencies {
     compileOnly files('libs/herobrine_prime.jar')
     compileOnly files('libs/Lunar-forge-1.20.1-0.2.7.jar')
     compileOnly files('libs/crc-1.0.5.jar')
+    compileOnly files('libs/battlemusic-1.20.1-1.1.1.jar')
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 }
 mixin { add sourceSets.main, 'calamitouscore.refmap.json'; config 'calamitouscore.mixins.json' }

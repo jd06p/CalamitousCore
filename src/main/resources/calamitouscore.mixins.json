@@ -42,7 +42,10 @@
     "SummonHudPositionMixin",
     "ManaHudVisibilityMixin",
     "lunar.LunarMoonRenderingMixin",
-    "crc.CrcPortalScreenMixin"
+    "crc.CrcPortalScreenMixin",
+    "battlemusic.BattleMusicValidityMixin",
+    "battlemusic.BattleMusicSelectionMixin",
+    "battlemusic.BattleMusicInstanceMixin"
   ],
   "injectors": {
     "defaultRequire": 1
