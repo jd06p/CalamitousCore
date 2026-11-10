@@ -6,6 +6,11 @@
   "refmap": "calamitouscore.refmap.json",
   "mixins": [
     "CityTickMixin",
+    "CityBuildRequestAccessor",
+    "EnderDragonCompletionMixin",
+    "EndCityDataMixin",
+    "EndDullingEntityTickMixin",
+    "EndTerracubeMixin",
     "BossCityTickMixin",
     "RaidTickMixin",
     "InfectionMixin",
