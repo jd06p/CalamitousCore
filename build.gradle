@@ -80,3 +80,10 @@ tasks.register('verifySoundCloudPns', JavaExec) {
     classpath = sourceSets.test.runtimeClasspath
     mainClass = 'dev.karma.calamitouscore.compat.etched.SoundCloudPnsCheck'
 }
+
+tasks.register('verifyTerramityMining', JavaExec) {
+    dependsOn testClasses
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'dev.karma.calamitouscore.compat.terramity.TerramityMiningCheck'
+    args project.findProperty('terramityModsDir') ?: 'C:/Users/jd06p/curseforge/minecraft/Instances/Terramity Calamitous Edition/mods'
+}

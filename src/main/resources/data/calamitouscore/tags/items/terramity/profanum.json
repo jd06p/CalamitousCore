@@ -1,0 +1,41 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "required": false,
+      "id": "saintsdragons:worldroot_pickaxe"
+    },
+    {
+      "required": false,
+      "id": "thedulling:plangent_pickaxe"
+    },
+    {
+      "required": false,
+      "id": "enlightened_end:adamantite_pickaxe"
+    },
+    {
+      "required": false,
+      "id": "thedulling:crusher_pickaxe"
+    },
+    {
+      "required": false,
+      "id": "composite_material:allay_steel_pickaxe"
+    },
+    {
+      "required": false,
+      "id": "thedulling:verglasteel_pickaxe"
+    },
+    {
+      "required": false,
+      "id": "thedulling:sacred_pickaxe"
+    },
+    {
+      "required": false,
+      "id": "composite_material:vanitatium_pickaxe"
+    },
+    {
+      "required": false,
+      "id": "composite_material:echoium_pickaxe"
+    }
+  ]
+}

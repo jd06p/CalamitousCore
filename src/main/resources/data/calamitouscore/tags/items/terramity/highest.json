@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "required": false,
+      "id": "thedulling:destroyer_pickaxe"
+    },
+    {
+      "required": false,
+      "id": "thedulling:cosmic_gold_pickaxe"
+    },
+    {
+      "required": false,
+      "id": "composite_material:etherite_pickaxe"
+    }
+  ]
+}

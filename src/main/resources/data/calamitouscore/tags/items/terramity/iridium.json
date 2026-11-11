@@ -1,0 +1,33 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "required": false,
+      "id": "composite_material:obsidian_pickaxe"
+    },
+    {
+      "required": false,
+      "id": "thedulling:elderwood_pickaxe"
+    },
+    {
+      "required": false,
+      "id": "thedulling:keres_metal_pickaxe"
+    },
+    {
+      "required": false,
+      "id": "thedulling:morphing_pickaxe"
+    },
+    {
+      "required": false,
+      "id": "thedulling:shadow_pickaxe"
+    },
+    {
+      "required": false,
+      "id": "thedulling:breacher_pickaxe"
+    },
+    {
+      "required": false,
+      "id": "composite_material:primitive_pickaxe"
+    }
+  ]
+}
