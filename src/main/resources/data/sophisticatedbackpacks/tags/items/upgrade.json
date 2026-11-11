@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    { "id": "sophisticatedstorage:jukebox_upgrade", "required": false },
+    { "id": "sophisticatedstorage:advanced_jukebox_upgrade", "required": false }
+  ]
+}
