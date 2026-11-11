@@ -47,3 +47,9 @@ tasks.register('verifyCrcData', JavaExec) {
     classpath = sourceSets.test.runtimeClasspath
     mainClass = 'dev.karma.calamitouscore.compat.crc.CrcRaidDataCheck'
 }
+
+tasks.register('verifyPetRevivalData', JavaExec) {
+    dependsOn testClasses
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'dev.karma.calamitouscore.revival.PetRevivalDataCheck'
+}
