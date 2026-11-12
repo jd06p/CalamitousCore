@@ -49,6 +49,15 @@
     "crc.CrcFightMixin"
   ],
   "client": [
+    "stellara.StellaraVisibilityFrameMixin",
+    "stellara.StellaraBillboardClipMixin",
+    "stellara.StellaraRegistryMixin",
+    "stellara.StellaraAuroraMixin",
+    "stellara.StellaraRibbonMixin",
+    "stellara.StellaraRibbonDataAccessor",
+    "stellara.StellaraRainbowMixin",
+    "stellara.StellaraStarFieldMixin",
+    "stellara.StellaraStarDataAccessor",
     "etched.SoundCloudPreparedMixin",
     "etched.SoundCloudChannelMixin",
     "etched.SoundCloudPlaybackMixin",
@@ -66,3 +75,5 @@
     "defaultRequire": 1
   }
 }
+
+

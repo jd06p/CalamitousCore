@@ -1,0 +1,2 @@
+{"required":true,"minVersion":"0.8","package":"dev.karma.calamitouscore.mixin.stellara","compatibilityLevel":"JAVA_17","mixins":["StellaraVisibilityFrameMixin","StellaraBillboardClipMixin","StellaraRegistryMixin","StellaraAuroraMixin","StellaraRibbonMixin","StellaraRibbonDataAccessor","StellaraRainbowMixin","StellaraStarFieldMixin","StellaraStarDataAccessor"],"injectors":{"defaultRequire":1}}
+
