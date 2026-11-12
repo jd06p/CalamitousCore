@@ -24,6 +24,10 @@ minecraft {
 }
 configurations { shadeNone }
 dependencies {
+    compileOnly files('libs/summonity-0.1.7.1.jar', 'libs/terramity_paisleys_summoning-0.4.1-forge-1.20.1.jar')
+    testCompileOnly files('libs/summonity-0.1.7.1.jar', 'libs/terramity_paisleys_summoning-0.4.1-forge-1.20.1.jar')
+    testRuntimeOnly files('libs/geckolib-forge-1.20.1-4.8.4.jar', 'libs/terramity-0.9.8-forge-1.20.1.jar')
+    testRuntimeOnly files('libs/summonity-0.1.7.1.jar', 'libs/terramity_paisleys_summoning-0.4.1-forge-1.20.1.jar', 'libs/curios-forge-5.14.1+1.20.1.jar')
     compileOnly files('libs/stellara-forge-1.20.1-0.1.4.jar')
     compileOnly files('libs/etched-3.0.4.jar', 'libs/sophisticatedbackpacksetchedintegration-1.0.0.jar', 'libs/sophisticatedcore-1.20.1-1.3.74.2217.jar')
     testRuntimeOnly files('libs/etched-3.0.4.jar')
@@ -37,11 +41,11 @@ dependencies {
     compileOnly files('libs/battlemusic-1.20.1-1.1.1.jar')
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 }
-mixin { add sourceSets.main, 'calamitouscore.refmap.json'; config 'calamitouscore.mixins.json' }
+mixin { add sourceSets.main, 'calamitouscore.refmap.json'; config 'calamitouscore.mixins.json'; config 'calamitouscore.summoning.mixins.json' }
 tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8'; options.release = 17 }
 jar {
     manifest.attributes([
-       'MixinConfigs': 'calamitouscore.mixins.json',
+       'MixinConfigs': 'calamitouscore.mixins.json,calamitouscore.summoning.mixins.json',
        'Specification-Title': 'CalamitousCore',
        'Implementation-Version': project.version
     ])
@@ -150,4 +154,13 @@ tasks.register('verifyStellaraWideFovGpu', JavaExec) {
     classpath = sourceSets.test.runtimeClasspath
     mainClass = 'dev.karma.calamitouscore.compat.stellara.StellaraGpuCheck'
     args file('build/stellara-visibility-fixtures-110'), 'production', '110'
+}
+
+
+
+
+tasks.register('verifySummoningCompat', JavaExec) {
+    dependsOn testClasses, createMcpToSrg
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'dev.karma.calamitouscore.compat.summoning.SummoningCompatCheck'
 }

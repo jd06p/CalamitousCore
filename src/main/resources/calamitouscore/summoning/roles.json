@@ -1,0 +1,216 @@
+{
+  "targets": [
+    "net.paisleypug.terramitypaisleyssummoning.entity.AdolescentUvogreEntity",
+    "net.paisleypug.terramitypaisleyssummoning.entity.ArmedFairyEntity",
+    "net.paisleypug.terramitypaisleyssummoning.entity.DwarfGnomeEntity",
+    "net.paisleypug.terramitypaisleyssummoning.entity.EchoBugSummonEntity",
+    "net.paisleypug.terramitypaisleyssummoning.entity.FlareFairyEntity",
+    "net.paisleypug.terramitypaisleyssummoning.entity.FrostKnightSummonEntity",
+    "net.paisleypug.terramitypaisleyssummoning.entity.FuzzyEntity",
+    "net.paisleypug.terramitypaisleyssummoning.entity.GoombaEntity",
+    "net.paisleypug.terramitypaisleyssummoning.entity.GubDukeOfGnomesEntity",
+    "net.paisleypug.terramitypaisleyssummoning.entity.HomunculusSkeletonEntity",
+    "net.paisleypug.terramitypaisleyssummoning.entity.LittleMageSummonEntity",
+    "net.paisleypug.terramitypaisleyssummoning.entity.OrbitalEntity",
+    "net.paisleypug.terramitypaisleyssummoning.entity.RoyalDwarfGnomeEntity",
+    "net.paisleypug.terramitypaisleyssummoning.entity.SummonedConjurlingEntity",
+    "net.paisleypug.terramitypaisleyssummoning.entity.SummonedEffigyEntity",
+    "net.paisleypug.terramitypaisleyssummoning.entity.SummonedFairyEntity",
+    "net.paisleypug.terramitypaisleyssummoning.entity.SummonedRoyalDwarfEntity",
+    "net.paisleypug.terramitypaisleyssummoning.entity.SummonedSimpleTurretEntity",
+    "net.paisleypug.terramitypaisleyssummoning.item.CubeOfMeatItem",
+    "net.paisleypug.terramitypaisleyssummoning.item.FuzzstersRingItem",
+    "net.paisleypug.terramitypaisleyssummoning.item.FuzzstersRingPlusItem",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.AdolescentUvogreEntityDiesProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.ArcaneIronslagBaubleIsEquippedProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.ArcaneIronslagBaubleIsUnequippedProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.ArmedFairyEntityDiesProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.ArmedFairyStaffRightclickedProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.CambionEmbryoBaubleIsEquippedProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.CambionEmbryoBaubleIsUnequippedProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.ClearSummonsOnKeyPressedProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.Cs10Procedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.Cs11Procedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.Cs12Procedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.Cs13Procedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.Cs14Procedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.Cs15Procedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.Cs16Procedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.Cs17Procedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.Cs18Procedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.Cs19Procedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.Cs1Procedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.Cs20Procedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.Cs2Procedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.Cs3Procedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.Cs4Procedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.Cs5Procedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.Cs6Procedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.Cs7Procedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.Cs8Procedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.Cs9Procedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.CubeOfMeatBaubleIsEquippedProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.DwarfGnomeEntityDiesProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.DwarfGnomeOnInitialEntitySpawnProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.EchoBugRightClickProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.EchoBugSummonEntityDiesProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.FairyStaffRightclickedProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.FlareFairyEntityDiesProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.FlareStaffRightClickProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.FrostKnightRightClickProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.FrostKnightSummonEntityDiesProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.FuzzsterRingBaubleIsEquippedProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.FuzzstersRingPlusBaubleIsEquippedProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.FuzzyOnEntityTickUpdateProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.GnomeKingStaffRightclickedProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.GnomeStaffRightclickedProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.GoombaEntityDiesProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.GoombaStaffRightclickedProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.GubDukeOfGnomesEntityDiesProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.GubDukeOfGnomesEntityIsHurtProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.HomunculusSkeletonEntityDiesProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.HulaHoopsBaubleIsEquippedProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.HulaHoopsBaubleIsUnequippedProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.ImmaculateEmbryoBaubleIsEquippedProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.ImmaculateEmbryoBaubleIsUnequippedProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.IncreaseCopperTinkererProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.IncreaseGnomeKingProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.IridescentRingBaubleIsEquippedProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.IridescentRingBaubleIsUnequippedProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.IridescentRingPlusBaubleIsEquippedProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.IridescentRingPlusBaubleIsUnequippedProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.LittleMageSummonEntityDiesProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.MageStaffRightClickProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.Ms10Procedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.Ms11Procedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.Ms12Procedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.Ms13Procedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.Ms14Procedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.Ms15Procedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.Ms16Procedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.Ms17Procedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.Ms18Procedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.Ms19Procedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.Ms1Procedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.Ms20Procedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.Ms2Procedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.Ms3Procedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.Ms4Procedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.Ms5Procedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.Ms6Procedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.Ms7Procedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.Ms8Procedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.Ms9Procedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.NewSummonTagHitProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.OrbitalOnEntityTickUpdateProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.PolyphemusStaffRightclickedProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.PygmyNecklaceBaubleIsEquippedProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.PygmyNecklaceBaubleIsUnequippedProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.SimpleWrenchSwordRightclickedOnBlockProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.SkeletonStaffRightclickedProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.SkullPendantPoop1Procedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.SkullpendantpissProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.SummonActiveAbilityOnKeyPressedProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.SummonDamagedProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.SummonKillsProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.SummonedEffigyEntityDiesProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.SummonedFairyEntityDiesProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.SummonedFairyOnEntityTickUpdateProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.SummonedFairyOnInitialEntitySpawnProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.SummonedRoyalDwarfOnInitialEntitySpawnProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.SummonedSimpleTurretEntityDiesProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.SummonersBeltBaubleIsEquippedProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.SummonersBeltBaubleIsUnequippedProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.TrialChampIncProcedure",
+    "net.paisleypug.terramitypaisleyssummoning.procedures.TrialStaffRightclickedProcedure"
+  ],
+  "staffs": [
+    "net.paisleypug.terramitypaisleyssummoning.item.ArmedFairyStaffItem",
+    "net.paisleypug.terramitypaisleyssummoning.item.EchoBugStaffItem",
+    "net.paisleypug.terramitypaisleyssummoning.item.FairyStaffItem",
+    "net.paisleypug.terramitypaisleyssummoning.item.FlareStaffItem",
+    "net.paisleypug.terramitypaisleyssummoning.item.FrostKnightStaffItem",
+    "net.paisleypug.terramitypaisleyssummoning.item.GnomeKingStaffItem",
+    "net.paisleypug.terramitypaisleyssummoning.item.GnomeStaffItem",
+    "net.paisleypug.terramitypaisleyssummoning.item.GoombaStaffItem",
+    "net.paisleypug.terramitypaisleyssummoning.item.MageStaffItem",
+    "net.paisleypug.terramitypaisleyssummoning.item.PolyphemusStaffItem",
+    "net.paisleypug.terramitypaisleyssummoning.item.SimpleWrenchSwordItem",
+    "net.paisleypug.terramitypaisleyssummoning.item.SkeletonStaffItem",
+    "net.paisleypug.terramitypaisleyssummoning.item.TrialStaffItem"
+  ],
+  "entities": {
+    "terramity_paisleys_summoning:summoned_fairy": {
+      "class": "net.paisleypug.terramitypaisleyssummoning.entity.SummonedFairyEntity",
+      "cost": 1
+    },
+    "terramity_paisleys_summoning:homunculus_skeleton": {
+      "class": "net.paisleypug.terramitypaisleyssummoning.entity.HomunculusSkeletonEntity",
+      "cost": 1
+    },
+    "terramity_paisleys_summoning:dwarf_gnome": {
+      "class": "net.paisleypug.terramitypaisleyssummoning.entity.DwarfGnomeEntity",
+      "cost": 1
+    },
+    "terramity_paisleys_summoning:royal_dwarf_gnome": {
+      "class": "net.paisleypug.terramitypaisleyssummoning.entity.RoyalDwarfGnomeEntity",
+      "cost": 0
+    },
+    "terramity_paisleys_summoning:summoned_simple_turret": {
+      "class": "net.paisleypug.terramitypaisleyssummoning.entity.SummonedSimpleTurretEntity",
+      "cost": 1
+    },
+    "terramity_paisleys_summoning:gub_duke_of_gnomes": {
+      "class": "net.paisleypug.terramitypaisleyssummoning.entity.GubDukeOfGnomesEntity",
+      "cost": 2
+    },
+    "terramity_paisleys_summoning:summoned_royal_dwarf": {
+      "class": "net.paisleypug.terramitypaisleyssummoning.entity.SummonedRoyalDwarfEntity",
+      "cost": 0
+    },
+    "terramity_paisleys_summoning:flare_fairy": {
+      "class": "net.paisleypug.terramitypaisleyssummoning.entity.FlareFairyEntity",
+      "cost": 1
+    },
+    "terramity_paisleys_summoning:little_mage_summon": {
+      "class": "net.paisleypug.terramitypaisleyssummoning.entity.LittleMageSummonEntity",
+      "cost": 1
+    },
+    "terramity_paisleys_summoning:frost_knight_summon": {
+      "class": "net.paisleypug.terramitypaisleyssummoning.entity.FrostKnightSummonEntity",
+      "cost": 1
+    },
+    "terramity_paisleys_summoning:echo_bug_summon": {
+      "class": "net.paisleypug.terramitypaisleyssummoning.entity.EchoBugSummonEntity",
+      "cost": 1
+    },
+    "terramity_paisleys_summoning:armed_fairy": {
+      "class": "net.paisleypug.terramitypaisleyssummoning.entity.ArmedFairyEntity",
+      "cost": 1
+    },
+    "terramity_paisleys_summoning:goomba": {
+      "class": "net.paisleypug.terramitypaisleyssummoning.entity.GoombaEntity",
+      "cost": 1
+    },
+    "terramity_paisleys_summoning:summoned_effigy": {
+      "class": "net.paisleypug.terramitypaisleyssummoning.entity.SummonedEffigyEntity",
+      "cost": 2
+    },
+    "terramity_paisleys_summoning:summoned_conjurling": {
+      "class": "net.paisleypug.terramitypaisleyssummoning.entity.SummonedConjurlingEntity",
+      "cost": 0
+    },
+    "terramity_paisleys_summoning:orbital": {
+      "class": "net.paisleypug.terramitypaisleyssummoning.entity.OrbitalEntity",
+      "cost": 0
+    },
+    "terramity_paisleys_summoning:fuzzy": {
+      "class": "net.paisleypug.terramitypaisleyssummoning.entity.FuzzyEntity",
+      "cost": 0
+    },
+    "terramity_paisleys_summoning:adolescent_uvogre": {
+      "class": "net.paisleypug.terramitypaisleyssummoning.entity.AdolescentUvogreEntity",
+      "cost": 1
+    }
+  }
+}
