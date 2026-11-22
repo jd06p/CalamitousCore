@@ -44,6 +44,7 @@ dependencies {
     compileOnly files('libs/herobrine_prime.jar')
     compileOnly files('libs/Lunar-forge-1.20.1-0.2.7.jar')
     compileOnly files('libs/crc-1.0.5.jar')
+    compileOnly files('libs/difficulty_enhancement-2.0.20.jar')
     compileOnly files('libs/battlemusic-1.20.1-1.1.1.jar')
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 }
@@ -213,4 +214,10 @@ tasks.register('verifyTowerLoot', JavaExec) {
     dependsOn testClasses
     classpath = sourceSets.test.runtimeClasspath
     mainClass = 'dev.karma.calamitouscore.compat.fbt.TowerLootCheck'
+}
+
+tasks.register('verifyDifficultyUpdate', JavaExec) {
+    dependsOn testClasses, reobfJar
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'dev.karma.calamitouscore.compat.difficulty.DifficultyCheck'
 }
