@@ -24,6 +24,12 @@ minecraft {
 }
 configurations { shadeNone }
 dependencies {
+    testRuntimeOnly files('libs/emberbium-0.3.32-beta.118-dirty-mc1.20.1.jar')
+    compileOnly files('libs/emberbium-0.3.32-beta.118-dirty-mc1.20.1.jar')
+    compileOnly files('libs/jei-1.20.1-forge-15.74.0.229.jar')
+    compileOnly files('libs/geckolib-forge-1.20.1-4.8.4.jar')
+    testCompileOnly files('libs/thedulling-1.0.0-profiled.jar')
+    testRuntimeOnly files('libs/thedulling-1.0.0-profiled.jar')
     compileOnly files('libs/summonity-0.1.7.1.jar', 'libs/terramity_paisleys_summoning-0.4.1-forge-1.20.1.jar')
     testCompileOnly files('libs/summonity-0.1.7.1.jar', 'libs/terramity_paisleys_summoning-0.4.1-forge-1.20.1.jar')
     testRuntimeOnly files('libs/geckolib-forge-1.20.1-4.8.4.jar', 'libs/terramity-0.9.8-forge-1.20.1.jar')
@@ -41,13 +47,14 @@ dependencies {
     compileOnly files('libs/battlemusic-1.20.1-1.1.1.jar')
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 }
-mixin { add sourceSets.main, 'calamitouscore.refmap.json'; config 'calamitouscore.mixins.json'; config 'calamitouscore.summoning.mixins.json' }
+mixin { add sourceSets.main, 'calamitouscore.refmap.json'; config 'calamitouscore.mixins.json'; config 'calamitouscore.summoning.mixins.json'; config 'calamitouscore.dulling-performance.mixins.json'; config 'calamitouscore.performance.mixins.json' }
 tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8'; options.release = 17 }
 jar {
     manifest.attributes([
-       'MixinConfigs': 'calamitouscore.mixins.json,calamitouscore.summoning.mixins.json',
+       'MixinConfigs': 'calamitouscore.mixins.json,calamitouscore.summoning.mixins.json,calamitouscore.dulling-performance.mixins.json,calamitouscore.performance.mixins.json',
        'Specification-Title': 'CalamitousCore',
-       'Implementation-Version': project.version
+       'Implementation-Version': project.version,
+       'CalamitousCore-Performance-Revision': '2026-11-22-wave3'
     ])
     finalizedBy 'reobfJar'
 }
@@ -164,3 +171,34 @@ tasks.register('verifySummoningCompat', JavaExec) {
     classpath = sourceSets.test.runtimeClasspath
     mainClass = 'dev.karma.calamitouscore.compat.summoning.SummoningCompatCheck'
 }
+
+tasks.register('verifyDullingPerformance', JavaExec) {
+    dependsOn testClasses, createMcpToSrg
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'dev.karma.calamitouscore.compat.dulling.performance.DullingPerfCheck'
+    jvmArgs '-Xms512m', '-Xmx1024m'
+}
+
+tasks.register('verifyDullingServerSide', JavaExec) {
+    dependsOn testClasses, createMcpToSrg
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'dev.karma.calamitouscore.compat.dulling.performance.DullingPerfCheck'
+    args 'server'
+    jvmArgs '-Xms512m', '-Xmx1024m'
+}
+
+tasks.register('verifyPerformanceWave2', JavaExec) {
+    dependsOn testClasses, createMcpToSrg
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'dev.karma.calamitouscore.compat.performance.PerformanceCheck'
+    jvmArgs '-Xms512m', '-Xmx1536m', '-XX:-TieredCompilation', '-Xbatch', '-XX:CompileThreshold=1000'
+}
+tasks.register('verifyPerformanceWave2Server', JavaExec) {
+    dependsOn testClasses, createMcpToSrg
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'dev.karma.calamitouscore.compat.performance.PerformanceCheck'
+    args 'server'
+    jvmArgs '-Xms512m', '-Xmx1536m'
+}
+
+

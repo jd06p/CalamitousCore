@@ -20,6 +20,7 @@ public final class CalamitousCore {
     private static void onCommonSetup(FMLCommonSetupEvent event) {
         event.enqueueWork(CrcPortalNetwork::register);
         event.enqueueWork(dev.karma.calamitouscore.compat.summoning.SummoningCompatibility::register);
+        event.enqueueWork(dev.karma.calamitouscore.compat.performance.PerformanceRegistration::register);
         event.enqueueWork(dev.karma.calamitouscore.compat.etched.EtchedJukeboxNetwork::register);
     }
 }

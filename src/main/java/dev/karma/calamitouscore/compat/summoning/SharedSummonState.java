@@ -13,7 +13,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.paisleypug.terramitypaisleyssummoning.network.TerramityPaisleysSummoningModVariables;
 
 public final class SharedSummonState {
-    private static final Map<TerramityPaisleysSummoningModVariables.PlayerVariables, WeakReference<Player>> OWNERS = Collections.synchronizedMap(new WeakHashMap<>());
+    private static final ThreadLocal<Map<TerramityPaisleysSummoningModVariables.PlayerVariables, WeakReference<Player>>> OWNERS = ThreadLocal.withInitial(WeakHashMap::new);
     private SharedSummonState() {}
     public static boolean paisley(Entity entity) {
         return entity instanceof SummonedMinion && SummoningRoles.ENTITIES.containsKey(String.valueOf(ForgeRegistries.ENTITY_TYPES.getKey(entity.getType())));
@@ -49,15 +49,20 @@ public final class SharedSummonState {
     }
     public static void bind(Entity entity) {
         Player player = owner(entity);
-        if (player != null) player.getCapability(TerramityPaisleysSummoningModVariables.PLAYER_VARIABLES_CAPABILITY).ifPresent(vars -> OWNERS.put(vars, new WeakReference<>(player)));
+        if (player != null) {
+            var vars = player.getCapability(TerramityPaisleysSummoningModVariables.PLAYER_VARIABLES_CAPABILITY).orElse(null);
+            if (vars == null) return;
+            var owners = OWNERS.get(); var previous = owners.get(vars);
+            if (previous == null || previous.get() != player) owners.put(vars, new WeakReference<>(player));
+        }
     }
     public static int used(Player player) { return player.level() instanceof ServerLevel level ? MinionHelper.getUsedMinionSlots(level, player) : 0; }
     public static double read(TerramityPaisleysSummoningModVariables.PlayerVariables vars) {
-        var reference = OWNERS.get(vars); Player player = reference == null ? null : reference.get();
+        var reference = OWNERS.get().get(vars); Player player = reference == null ? null : reference.get();
         return player != null && !player.level().isClientSide ? used(player) : vars.currentSummons;
     }
     public static double admission(TerramityPaisleysSummoningModVariables.PlayerVariables vars, int cost) {
-        var reference = OWNERS.get(vars); Player player = reference == null ? null : reference.get();
+        var reference = OWNERS.get().get(vars); Player player = reference == null ? null : reference.get();
         if (player == null) return read(vars);
         int cap = SummonityPlayerData.getMinionSlots(player);
         return cap < cost ? cap : Math.min(read(vars), cap - cost);
