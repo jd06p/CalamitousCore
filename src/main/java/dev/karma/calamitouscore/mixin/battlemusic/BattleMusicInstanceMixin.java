@@ -1,6 +1,12 @@
 package dev.karma.calamitouscore.mixin.battlemusic;
 
 import com.nekotune.battlemusic.BattleMusicInstance;
+import dev.karma.calamitouscore.compat.battlemusic.BattleMusicGain;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.resources.sounds.AbstractTickableSoundInstance;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.RandomSource;
 import dev.karma.calamitouscore.compat.battlemusic.BattleMusicLifecycle;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Pseudo;
@@ -10,7 +16,21 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Pseudo
 @Mixin(targets = "com.nekotune.battlemusic.BattleMusicInstance", remap = false)
-public abstract class BattleMusicInstanceMixin {
+public abstract class BattleMusicInstanceMixin extends AbstractTickableSoundInstance implements BattleMusicGain {
+    private BattleMusicInstanceMixin(SoundEvent event, SoundSource category, RandomSource random) {
+        super(event, category, random);
+    }
+
+    @Override
+    public float getVolume() {
+        return super.getVolume() * Minecraft.getInstance().options.getSoundSourceVolume(SoundSource.MUSIC);
+    }
+
+    @Override
+    public float calamitouscore$unscaledGain() {
+        return super.getVolume();
+    }
+
     @Inject(method = "<init>", at = @At("RETURN"))
     private void calamitouscore$track(CallbackInfo ci) {
         BattleMusicLifecycle.created((BattleMusicInstance) (Object) this);
@@ -28,3 +48,5 @@ public abstract class BattleMusicInstanceMixin {
         if (BattleMusicLifecycle.stopIfInvalid((BattleMusicInstance) (Object) this)) ci.cancel();
     }
 }
+
+

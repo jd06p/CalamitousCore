@@ -202,3 +202,15 @@ tasks.register('verifyPerformanceWave2Server', JavaExec) {
 }
 
 
+
+tasks.register('verifyBattleMusicUpdate', JavaExec) {
+    dependsOn testClasses, reobfJar
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'dev.karma.calamitouscore.compat.battlemusic.BattleMusicCheck'
+}
+
+tasks.register('verifyTowerLoot', JavaExec) {
+    dependsOn testClasses
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'dev.karma.calamitouscore.compat.fbt.TowerLootCheck'
+}

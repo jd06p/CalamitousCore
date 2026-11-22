@@ -14,6 +14,7 @@ public final class CalamitousCore {
     public CalamitousCore() {
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, HerobrineConfig.SPEC, "calamitouscore-common.toml");
         ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, LunarConfig.SPEC, "calamitouscore-client.toml");
+        dev.karma.calamitouscore.compat.fbt.TowerChestLoot.register(FMLJavaModLoadingContext.get().getModEventBus());
         FMLJavaModLoadingContext.get().getModEventBus().addListener(CalamitousCore::onCommonSetup);
     }
 
@@ -24,4 +25,5 @@ public final class CalamitousCore {
         event.enqueueWork(dev.karma.calamitouscore.compat.etched.EtchedJukeboxNetwork::register);
     }
 }
+
 
