@@ -221,3 +221,12 @@ tasks.register('verifyDifficultyUpdate', JavaExec) {
     classpath = sourceSets.test.runtimeClasspath
     mainClass = 'dev.karma.calamitouscore.compat.difficulty.DifficultyCheck'
 }
+
+['CLIENT', 'SERVER'].each { side ->
+    tasks.register("verifyGunHands${side}", JavaExec) {
+        dependsOn testClasses, reobfJar
+        classpath = sourceSets.test.runtimeClasspath
+        mainClass = 'dev.karma.calamitouscore.compat.terramity.GunHandCheck'
+        args side
+    }
+}

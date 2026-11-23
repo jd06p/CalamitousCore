@@ -1,1 +1,2 @@
-{"required":true,"minVersion":"0.8","package":"dev.karma.calamitouscore.mixin.difficulty","compatibilityLevel":"JAVA_17","mixins":["WaystonesArrivalMixin"],"client":["CoffeePaletteMixin","ModifierScreenPaletteMixin"],"injectors":{"defaultRequire":1}}
+{"required":true,"minVersion":"0.8","package":"dev.karma.calamitouscore.mixin.difficulty","compatibilityLevel":"JAVA_17","mixins":["WaystonesArrivalMixin","BossRushMixin"],"client":["CoffeePaletteMixin","ModifierScreenPaletteMixin"],"injectors":{"defaultRequire":1}}
+

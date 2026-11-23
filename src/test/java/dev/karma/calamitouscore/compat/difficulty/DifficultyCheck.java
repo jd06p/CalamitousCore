@@ -32,12 +32,13 @@ public final class DifficultyCheck {
         phase.setAccessible(true);
         phase.invoke(null, MixinEnvironment.Phase.DEFAULT);
         var transformer = ((StellaraTestMixinService)MixinService.getService()).transformer();
-        for (String target : List.of("client.ui.Coffee", "client.ui.ModifierScreen", "compat.WaystonesBridge")) {
+        for (String target : List.of("client.ui.Coffee", "client.ui.ModifierScreen", "compat.WaystonesBridge", "server.BossRush")) {
             String name = "com.misanthropy.linggango.difficulty_enhancement." + target;
             ClassNode node = new ClassNode();
             new ClassReader(transformer.transformClassBytes(name, name, classes.get(name))).accept(node, 0);
+            if (target.endsWith("BossRush")) BossRushClockCheck.verify(node);
             for (String marker : target.endsWith("ModifierScreen") ? List.of("$theme", "$cardSwitch")
-                    : List.of(target.endsWith("Coffee") ? "$theme" : "$applyArrivalPenalty")) {
+                    : target.endsWith("BossRush") ? List.of("$sharedClock", "$encounter") : List.of(target.endsWith("Coffee") ? "$theme" : "$applyArrivalPenalty")) {
                 long sites = node.methods.stream().filter(m -> !m.name.contains("calamitouscore"))
                     .flatMap(m -> Arrays.stream(m.instructions.toArray()))
                     .filter(i -> i instanceof MethodInsnNode call && call.name.contains(marker)).count();
@@ -47,3 +48,4 @@ public final class DifficultyCheck {
         }
     }
 }
+

@@ -1,0 +1,1 @@
+{"required":true,"minVersion":"0.8","package":"dev.karma.calamitouscore.mixin.terramity","compatibilityLevel":"JAVA_17","mixins":["GunHandGateMixin","ChargedGunHandGateMixin","GunHandWarningMixin"],"client":["GunHudHandMixin"],"injectors":{"defaultRequire":1}}

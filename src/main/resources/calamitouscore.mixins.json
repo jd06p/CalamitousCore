@@ -5,6 +5,10 @@
   "compatibilityLevel": "JAVA_17",
   "refmap": "calamitouscore.refmap.json",
   "mixins": [
+    "terramity.GunHandGateMixin",
+    "terramity.ChargedGunHandGateMixin",
+    "terramity.GunHandWarningMixin",
+    "difficulty.BossRushMixin",
     "difficulty.WaystonesArrivalMixin",
     "etched.JukeboxUpgradeLimitMixin",
     "etched.SoundCloudSourceMixin",
@@ -50,6 +54,7 @@
     "crc.CrcFightMixin"
   ],
   "client": [
+    "terramity.GunHudHandMixin",
     "difficulty.CoffeePaletteMixin",
     "difficulty.ModifierScreenPaletteMixin",
     "stellara.StellaraVisibilityFrameMixin",

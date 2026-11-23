@@ -12,6 +12,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 @Mod("calamitouscore")
 public final class CalamitousCore {
     public CalamitousCore() {
+        ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, dev.karma.calamitouscore.compat.difficulty.BossRushConfig.SPEC, "calamitouscore-boss-rush.toml");
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, HerobrineConfig.SPEC, "calamitouscore-common.toml");
         ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, LunarConfig.SPEC, "calamitouscore-client.toml");
         dev.karma.calamitouscore.compat.fbt.TowerChestLoot.register(FMLJavaModLoadingContext.get().getModEventBus());
